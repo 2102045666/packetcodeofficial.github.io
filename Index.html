@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Halade Lab</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/my_js.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link href="css/elements.css" rel="stylesheet">
+		</noscript>
+		
+		<style>
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: black;
+}
+</style>
+		<style>
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  opacity: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+	</head>
+	<body class="homepage">
+
+		<!-- Header -->
+			<div id="header" >
+				<div class="container">
+						
+					<!-- Logo -->
+						<h2><a href="#" id="logo">Halade Lab</a></h2>
+					
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><h1 style = "font-size: 25px"><a href="Index.html">About US</a></h1></li>
+								<li><h1 style = "font-size: 25px"><a href="Research1.html">Research</a></h1></li>
+								<li><h1 style = "font-size: 25px"><a href="Gallery.html">Gallery</a></h1></li>
+								<li><h1 style = "font-size: 25px"><a href="Team.html">Team</a></h1></li>
+								<li><h1 style = "font-size: 25px"><a href="Publications.html">Publications</a></h1></li>
+                                <li><h1 style = "font-size: 25px"><a href="News.html">News</a></h1></li>
+                            </ul>
+						</nav>
+
+
+					<!-- Banner -->
+						<div id="banner">
+							<div class="container">
+								<section>
+									<header class="major">
+										<h2>Welcome to Halade Lab!</h2>
+                                    <span class="byline">Our research objective is to determine on how unresolved chronic inflammation and immune responsive metabolic dysregulation contributes to ischemic and non-ischemic heart failure.</span>
+									</header>
+
+									
+</div>
+									
+									<button class="button alt" id="popup" onclick="openForm()" style="position: relative;margin-top: 90px;">Contact Us</button>
+									<div class="form-popup" id="myForm">
+  <form action="mailto:ghalade@usf.edu" class="form-container" method="post" enctype=”multipart/form-data”>
+	<h2 style="color:black; text-align: left;">Contact Us</h2>
+	
+	<label for="Name" style="color:black; text-align: left;"><b>Name</b></label>
+	<input type="text" placeholder="Enter Name" name="name" required style = "background-color: rgb(226, 208, 208);color: #000;">
+
+    <label for="email" style="color:black; text-align: left;"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required style = "background-color: rgb(226, 208, 208);color: #000;">
+
+    <label for="Address" style="color:black; text-align: left;"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" style = "background-color: rgb(226, 208, 208);color: #000;">
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+								</section>			
+							</div>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Featured -->
+			<div class="wrapper style2" style="background-color: white;">
+				<section class="container" style="position: relative;margin-top: -70px;">
+					<header class="major">
+						<h2 style = "text-align:center;color:black;font-size: 60px;" >Focus</h2>
+                        <span class="byline" style="color:black;"><h3 style="border-bottom: 1px solid;font-size: 35px;">Halade lab research focuses on :</h3>
+                            <ul>
+
+							<li type="square" style="color:black;text-align: justify;"><b>Study of heart failure etiology with an integrative approach focusing on splenic leukocytes and heart;</b></li>
+						
+                            <li type="square" style="color:black;text-align: justify;margin-top: 20px;"><b>Measurement of inflammatory mediators that impair cardiac repair and resolving lipid mediators that facilitate cardiac repair after heart attack;</b></li>
+                            <li type="square" style="color:black;text-align: justify;margin-top: 20px;"><b>Role of resolution receptor in inflammation-resolution processes in heart failure; and</b></li>
+							<li type="square" style="color:black;text-align: justify;margin-top: 20px;"><b>Translate our findings for use in human therapy, considering risk factors such as obesity, diabetes, aging, and co-medications (oncological drugs).</b></li>
+
+						</ul>
+						<br>
+						<div style = "border-top: 1px solid;"></div>
+                        </span>
+					</header>
+					<div class="row no-collapse-1" style="position: relative;margin-top: 90px;">
+						<section class="4u">
+							<a href="https://hscweb3.hsc.usf.edu/blog/2020/06/22/usf-health-team-identifies-mouse-model-to-better-study-prevalent-form-of-heart-failure-linked-to-age-related-obesity/" class="image feature" target="_blank"><img src="images/6fb197bdf184992fa46720d37f10ad47.jpg" alt=""></a>
+							<h1 style = "text-align:center;font-size: 20px;color: #000;">USF Health</h1>
+						</section>
+						<section class="4u">
+							<a href="https://health.usf.edu/medicine" class="image feature" target="_blank"><img src="images/usf_1024xx536-303-0-67.jpg" alt=""></a>
+							<h1 style = "text-align:center;font-size: 20px;color: #000;">Morsani College of Medicine and Heart Institute</h1>
+						</section>
+						<section class="4u">
+							<a href="Research.html" class="image feature"><img src="images/heart-health-300x180.jpg" alt=""></a>
+							<h1 style = "text-align:center;font-size: 20px;color: #000;">Heart Research</h1>
+						</section>
+	
+					</div>
+				</section>
+			</div>
+
+		<!-- Main -->
+			
+
+		<!-- Footer -->
+			<div id="footer" style="background-color: rgba(90, 158, 247, 0.068);">
+				<div class="container">
+
+					<!-- Lists -->
+						<div class="row">
+							<div class="8u">
+								<section>
+									<header class="major" style="position: relative;margin-top: -35px;">
+										<h2 style = "color: white;font-size: 40px;">Location</h2>
+										<span class="byline"><!----></span>
+									</header>
+									<div class="row">
+										<br>
+										<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=560%20Channelside%20Drive%20Tampa%20&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" style = "align-items: center;" ></iframe><a href="https://123movies-to.org">movies123</a></div><style>.mapouter{position: relative; text-align:right;height:500px;width:600px;align-items: center;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px; margin-left: auto; margin-right: auto;}</style></div>
+									</div>
+								</section>
+							</div>
+							<div class="4u">
+								<section style="position: relative;margin-top: 150px;">
+									<header class="major">
+										<h2 style = "font-size: 40px">Contact Details</h2>
+										<span class="byline"></span>
+									</header>
+									<ul class="contact">
+										<li>
+											<span class="address">Address</span>
+											<span>560 Channelside Drive<br />Tampa, FL 33602</span>
+										</li>
+										<li>
+											<span class="mail">Mail &#128242;</span>
+											<span><a href="#">ghalade@usf.edu</a></span>
+										</li>
+										<li>
+											<span class="phone">Phone &#9742;</span>
+											<span>+1(813)396-0104</span>
+										</li>
+									</ul>	
+								</section>
+							</div>
+						</div>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							@2021 by University of South Florida
+						</div>
+
+				</div>
+			</div>
+	</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Research</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<style>
+      body{
+        zoom: 1;
+        -moz-transform: scale(1);
+        scale: 1;
+      }
+			.slideshowContainer {
+  position: relative;
+  overflow: visible;
+  margin: 50px 0 75px;
+  
+  height: 500px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ /*min-width: 100%;
+  min-height: 100%; */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+.testSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+ 
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px black;
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(4, 17, 46, 0.7);
+  border: solid 2px black;
+}
+		</style>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+						
+					<!-- Logo -->
+						<h2><a href="#" id="logo">Research</a></h2>
+					
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><h1 style = "font-size: 22px"><a href="Index.html">About US</a></h1></li>
+								<li><h1 style = "font-size: 22px"><a href="Research1.html">Research</a></h1></li>
+								<li><h1 style = "font-size: 22px"><a href="Gallery.html">Gallery</a></h1></li>
+								<li><h1 style = "font-size: 22px"><a href="Team.html">Team</a></h1></li>
+								<li><h1 style = "font-size: 22px"><a href="Publications.html">Publications</a></h1></li>
+                                <li><h1 style = "font-size: 22px"><a href="News.html">News</a></h1></li>
+                            </ul>
+						</nav>
+
+				</div>
+			</div>
+
+		<!-- Main -->
+			
+				
+				
+					<div style="padding-top: 40px;padding-right: 90px;padding-bottom: 30px;padding-left: 90px;">
+						<div><h2 style="color: white;text-align: center;font-size: 40px;">Heart Research</h2></div>
+						<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+
+
+
+
+  <div><img class="imageSlides" src="images/img13.PNG" alt="beach side city view" style="width: 1200px;" >
+  <img class="imageSlides" src="images/img16.PNG" alt="leaf on the ground" style="width: 1200px;">
+  <img class="imageSlides" src="images/img12.PNG" alt="lake surrounded by mountains" style="width: 1200px;">
+  <img class="imageSlides" src="images/img17.PNG" alt="lake surrounded by mountains" style="width: 1200px;">
+  <img class="imageSlides" src="images/img14.PNG" alt="lake surrounded by mountains" style="width: 1200px;">
+  <img class="imageSlides" src="images/img15.PNG" alt="lake surrounded by mountains" style="width: 1200px;"></div>
+  
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
+  <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+	<span class="circle"></span>
+	<span class="circle"></span>
+	<span class="circle"></span>
+	<span class="circle"></span>
+  </div>
+  
+</div>
+<script>
+	
+	var imageSlides = document.getElementsByClassName('imageSlides');
+var circles = document.getElementsByClassName('circle');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
+var counter = 0;
+
+// HIDE ALL IMAGES FUNCTION
+function hideImages() {
+  for (var i = 0; i < imageSlides.length; i++) {
+	imageSlides[i].classList.remove('visible');
+
+  }
+}
+
+// REMOVE ALL DOTS FUNCTION
+function removeDots() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    circles[i].classList.remove('dot');
+  }
+}
+
+// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+function imageLoop() {
+  var currentImage = imageSlides[counter];
+  var currentDot = circles[counter];
+ 
+
+  currentImage.classList.add('visible');
+  removeDots();
+  currentDot.classList.add('dot');
+  counter++;
+}
+
+// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+function arrowClick(e) {
+  var target = e.target;
+  if (target == leftArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == 1) {
+      counter = (imageSlides.length - 1);
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 5000);
+    } else {
+      counter--;
+      counter--;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 5000);
+    }
+  } 
+  else if (target == rightArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == imageSlides.length) {
+      counter = 0;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 5000);
+    } else {
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 5000);
+    }
+  }
+}
+
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);
+
+
+// IMAGE SLIDE FUNCTION
+function slideshow() {
+  if (counter < imageSlides.length) {
+    imageLoop();
+  } else {
+    counter = 0;
+    hideImages();
+    imageLoop();
+  }
+}
+
+// SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+setTimeout(slideshow, 1000);
+var imageSlideshowInterval = setInterval(slideshow, 5000);
+</script>
+					</div>
+				
+        
+		<!-- Footer -->
+			<div id="footer" style="background-color: rgba(90, 158, 247, 0.068);">
+				<div class="container" style="text-align: center;">
+
+					<!-- Lists -->
+						<div class ="row" style="text-align: center;">
+							<div class="column">
+								<a href="Index.html"><h2 style="color:white;position: relative;margin-left: 120px;">Index</h2></a>
+							</div>
+							<div class="column">
+								<h2>|</h2>
+							</div>
+							<div class="column">
+								<a href="Research1.html"><h2 style="color:white;">Research</h2></a>
+							</div>
+							<div class="column">
+								<h2>|</h2>
+							</div>
+							<div class="column">
+								<a href="Gallery.html"><h2 style="color: white;">Gallery</h2></a>
+							</div>
+							<div class="column">
+								<h2>|</h2>
+							</div>
+							<div class="column">
+								<a href="Team.html"><h2 style="color: white;">Team</h2></a>
+							</div>
+							<div class="column">
+								<h2>|</h2>
+							</div>
+							<div class="column">
+								<a href="Publications.html"><h2 style="color:white;">Publications</h2></a>
+							</div>
+							<div class="column">
+								<h2>|</h2>
+							</div>
+							<div class="column">
+								<a href="News.html"><h2 style="color:white;">News</h2></a>
+							</div>
+						</div>
+					<!-- Copyright -->
+						<div class="copyright">
+							@2020 by University of South Florida
+						</div>
+
+				</div>
+			</div>
+
+	</body>
+</html>
